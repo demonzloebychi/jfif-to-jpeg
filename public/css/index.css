@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+  margin: 0;
+}
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+input[type="file"] {
+}
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #0056b3;
+}
+.file-input-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 130px 150px;
+  cursor: pointer;
+  border-radius: 20px;
+  
+  /* Эффект стекла для белого фона */
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); /* Синхронизируем значение со стандартным */
+  
+  /* Красивая пунктирная рамка для drag-and-drop */
+  border: 2px dashed #cbd5e1; 
+  
+  /* Легкая тень, чтобы плашка "оторвалась" от белого фона */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.06);
+  
+  /* Плавный переход при наведении */
+  transition: all 0.3s ease;
+}
+.file-input {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}

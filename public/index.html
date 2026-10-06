@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JFIF в JPEG Конвертер</title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Конвертер</h2>
+      <form id="uploadForm">
+        <div class="file-input-wrapper">
+          Перетащите или выберите файл
+          <input
+            class="file-input"
+            type="file"
+            id="fileInput"
+            accept=".jfif, .png"
+            required
+          /><br />
+        </div>
+        <div class="file-inputed"></div>
+        <button type="submit">Конвертировать и скачать</button>
+      </form>
+    </div>
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>
