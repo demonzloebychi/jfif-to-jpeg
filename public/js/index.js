@@ -1,10 +1,10 @@
 const fileInput = document.getElementById('fileInput');
-    const fileInputed = document.querySelector('.file-inputed');
+const fileInputed = document.querySelector('.file-inputed');
 
     // 1. ОТДЕЛЬНО: Отслеживаем выбор файла (сработает сразу, как пользователь выберет файл)
     fileInput.addEventListener('change', function() {
         if (fileInput.files.length > 0) {
-            fileInputed.textContent = 'Файл выбран';
+            fileInputed.textContent = `Выбрано файлов: ${fileInput.files.length}`;
         } else {
             fileInputed.textContent = ''; // Очищаем текст, если пользователь сбросил выбор
         }
@@ -23,6 +23,9 @@ const fileInput = document.getElementById('fileInput');
 
         const formData = new FormData();
         formData.append('image', fileInput.files[0]);
+        // Array.from(fileInput.files).forEach((file) => {
+        //     formData.append('image[]', file); 
+        // });
 
         try {
             const response = await fetch('/convert', {
